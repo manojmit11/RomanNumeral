@@ -27,6 +27,13 @@ public class RomanNumeralTests {
 		assertEquals("II", romanNumeral.arabicToRoman(2));
 	}
 	
+	@Test
+	public void fourreturnsIV() {
+		
+		assertEquals("IV", romanNumeral.arabicToRoman(4));
+		
+	}
+	
 	
 	
 	

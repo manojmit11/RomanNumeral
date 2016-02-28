@@ -7,7 +7,14 @@ public class RomanNumeral {
 		
 		StringBuilder result= new StringBuilder();
 		
-		while(arabic>0){
+		if(arabic==4)
+		{
+			result.append("IV");
+			arabic-=4;
+			
+		}
+		
+		else for(;arabic>0;){
 		result.append("I");
 		arabic--;
 		}
