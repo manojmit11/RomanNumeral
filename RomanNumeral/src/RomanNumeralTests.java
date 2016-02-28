@@ -15,10 +15,18 @@ public class RomanNumeralTests {
 	}
 	
 	@Test
-	public void test() {
+	public void oneReturnsI() {
 		
 		assertEquals("I", romanNumeral.arabicToRoman(1));
 	}
+	
+	@Test
+	public void tworeturnsII() {
+		
+		assertEquals("I", romanNumeral.arabicToRoman(1));
+		assertEquals("II", romanNumeral.arabicToRoman(2));
+	}
+	
 	
 	
 
