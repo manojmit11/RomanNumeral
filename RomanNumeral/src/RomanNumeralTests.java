@@ -34,6 +34,14 @@ public class RomanNumeralTests {
 		
 	}
 	
+
+	@Test
+	public void fivereturnsV() {
+		
+		assertEquals("V", romanNumeral.arabicToRoman(5));
+		
+	}
+	
 	
 	
 	
