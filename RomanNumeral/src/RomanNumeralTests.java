@@ -34,13 +34,20 @@ public class RomanNumeralTests {
 		
 	}
 	
-
 	@Test
 	public void fivereturnsV() {
 		
 		assertEquals("V", romanNumeral.arabicToRoman(5));
 		
 	}
+	
+	@Test
+	public void NinereturnsIX(){
+		
+		assertEquals("IX", romanNumeral.arabicToRoman(9));
+
+	}
+	
 	
 	
 	
