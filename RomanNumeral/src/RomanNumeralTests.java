@@ -48,6 +48,14 @@ public class RomanNumeralTests {
 
 	}
 	
+	@Test
+	public void TenreturnsX(){
+		
+		assertEquals("X", romanNumeral.arabicToRoman(10));
+
+	}
+	
+	
 	
 	
 	

@@ -1,37 +1,42 @@
 
 public class RomanNumeral {
 
-	
+	private static final int[]    values  = { 1000, 900,  500, 400,  100, 90,   50,  40,   10,  9,    5,   4,    1   };
+	private static final String[] symbols = { "M",  "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+ 
 
 	public String arabicToRoman(Integer arabic) {
 		
 		StringBuilder result= new StringBuilder();
 		
-		if(arabic==9){
-			result.append("IX");
-			arabic-=9;
-			
-		}
-		if(arabic>=5){
-			result.append("V");
-			arabic-=5;
-		}
+		int remaining= arabic;
 		
-		if(arabic==4)
+		while(remaining>0){
+		for (int i=0;i<values.length;i++)
 		{
-			result.append("IV");
-			arabic-=4;
-			
+		remaining= appendRomanLiterals(remaining,values[i],symbols[i],result);
 		}
-		
-		else for(;arabic>0;){
-		result.append("I");
-		arabic--;
 		}
+	/*	
+		while (remaining >= 1) {
+		    result.append("I");
+		    remaining -= 1;
+		}
+	*/	
 		return result.toString();
 		
+	}
+
+	private int appendRomanLiterals(int remaining, int value, String symbol,
+			StringBuilder builder) {
+		int result= remaining;
 		
-		
+		if (result>=value)
+		{
+		  builder.append(symbol);
+		  result-=value;
+		}
+		return result;
 	}
 	
 
